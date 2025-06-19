@@ -1,24 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { Description } from "@radix-ui/react-dialog";
-import Link from "next/link";
-import { Item } from "@radix-ui/react-select";
-import Image from "next/image";
 import projects from "@/data/projects";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 const Works = () => {
-  const [project, setProject] = useState(projects[0]);
-
   return (
     <motion.div
       initial={{ opacity: 0 }}

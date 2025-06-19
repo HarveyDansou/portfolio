@@ -1,4 +1,4 @@
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import Link from "next/link";
 import { CiMenuBurger } from "react-icons/ci";
 

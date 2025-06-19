@@ -1,6 +1,4 @@
-import { FiDownloadCloud } from "react-icons/fi";
 import Social from "@/components/Social";
-import { Button } from "@/components/ui/button";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import ResumeBtn from "@/components/ResumeBtn";

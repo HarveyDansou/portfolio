@@ -13,7 +13,6 @@ import {
 } from "react-icons/fa";
 import {
   SiAndroid,
-  SiKotlin,
   SiDotnet,
   SiSqlite,
   SiMysql,
@@ -22,7 +21,6 @@ import {
   SiUml,
   SiJira,
 } from "react-icons/si";
-import {} from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -35,8 +33,6 @@ import {
 import experience from "@/data/experience";
 import education from "@/data/education";
 import about from "@/data/about";
-import { Button } from "@/components/ui/button";
-import { FiDownloadCloud } from "react-icons/fi";
 import ResumeBtn from "@/components/ResumeBtn";
 
 // skills data
@@ -193,7 +189,10 @@ const Resume = () => {
                   <div className="flex flex-col gap-[50px]">
                     {skills.items.map((item, index) => {
                       return (
-                        <ul className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-4 xl:gap-[30px]">
+                        <ul
+                          key={index}
+                          className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-4 xl:gap-[30px]"
+                        >
                           {item.map((skill, index) => {
                             return (
                               <li key={index}>

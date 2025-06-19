@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaGithub, FaYoutube, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 interface Props {
   containerStyles: string;

@@ -1,9 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import skills from "@/data/competences";
-import { BsArrowDownRight } from "react-icons/bs";
 
 const Skills = () => {
   return (

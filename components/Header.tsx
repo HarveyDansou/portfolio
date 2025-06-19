@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 import navs from "@/data/navs";
-import ResumeBtn from "./ResumeBtn";
 
 const Header = () => {
   const pathname = usePathname();
