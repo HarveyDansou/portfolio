@@ -21,8 +21,8 @@ export default {
       fieldValue: "10+ Years",
     },
     {
-      fieldName: "Skype",
-      fieldValue: "live:hairvey.dansou",
+      fieldName: "Ms Teams",
+      fieldValue: "hairvey.dansou@outlook.com",
     },
     {
       fieldName: "Location",

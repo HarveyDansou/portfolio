@@ -3,11 +3,11 @@ export default {
   icon: "/",
   title: "My experience",
   description:
-    "Here’s a look at my professional journey that have shaped my expertise in software" +
+    "Here's a look at my professional journey that have shaped my expertise in software" +
     " development and problem-solving across various industries and technologies.",
   items: [
     {
-      company: "Accueil francophine",
+      company: "Accueil francophone",
       position: "Database Assistant",
       duration: "2024 - 2025",
     },

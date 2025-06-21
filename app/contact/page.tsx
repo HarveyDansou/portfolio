@@ -5,6 +5,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { FaMapMarkedAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { FieldValues, useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { sendMail } from "@/service/mailapi";
 
 const info = [
   {
@@ -15,7 +19,7 @@ const info = [
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "hairvey.dansou@gmail.com",
+    description: "contact@harveydansou.com",
   },
   {
     icon: <FaMapMarkedAlt />,
@@ -24,7 +28,37 @@ const info = [
   },
 ];
 
+const schema = z.object({
+  firstname: z.string().min(2),
+  lastname: z.string().min(2),
+  email: z.string().min(8),
+  phone: z.string(),
+  message: z.string().min(2),
+});
+
+type FormData = z.infer<typeof schema>;
+
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isValid },
+  } = useForm<FormData>({ resolver: zodResolver(schema) });
+
+  const submitHandler = async (values: FieldValues) => {
+    try {
+      await sendMail(values);
+      // const { data } = await sendNotif(values);
+
+      // console.log("Response " + data);
+    } catch (error) {
+      console.log("Error " + error);
+    } finally {
+      reset();
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -38,7 +72,10 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/** form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#dcdcdc] rounded-md">
+            <form
+              onSubmit={handleSubmit(submitHandler)}
+              className="flex flex-col gap-6 p-10 bg-[#dcdcdc] rounded-md"
+            >
               <h3 className="text-4xl text-accent">
                 Let's build something great together!
               </h3>
@@ -49,18 +86,49 @@ const Contact = () => {
               </p>
               {/** input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firsname" placeholder="Firstname" />
-                <Input type="lasname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email address" />
-                <Input type="phone" placeholder="Phone number" />
+                <Input
+                  {...register("firstname")}
+                  type="firstname"
+                  placeholder="Firstname"
+                  className={`${
+                    errors.firstname && "border-2 border-red-600 text-red-600"
+                  }`}
+                />
+
+                <Input
+                  {...register("lastname")}
+                  type="lastname"
+                  placeholder="Lastname"
+                  className={`${
+                    errors.lastname && "border-2 border-red-600 text-red-600"
+                  }`}
+                />
+                <Input
+                  {...register("email")}
+                  type="email"
+                  placeholder="Email address"
+                  className={`${
+                    errors.email && "border-2 border-red-600 text-red-600"
+                  }`}
+                />
+                <Input
+                  {...register("phone")}
+                  type="tel"
+                  placeholder="Phone number"
+                />
               </div>
               {/** textarea */}
               <Textarea
-                className="h-[200px]"
+                {...register("message")}
                 placeholder="Type your message here."
+                className={`h-[200px] ${
+                  errors.message && "border-2 border-red-600 text-red-600"
+                }`}
               />
               {/** button */}
-              <Button className="max-w-40">Send message</Button>
+              <Button disabled={!isValid} className="max-w-40">
+                Send message
+              </Button>
             </form>
           </div>
           {/** info */}
