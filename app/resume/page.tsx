@@ -10,6 +10,7 @@ import {
   FaAws,
   FaGit,
   FaGithub,
+  FaDocker,
 } from "react-icons/fa";
 import {
   SiAndroid,
@@ -54,8 +55,12 @@ const skills = {
       },
       {
         icon: <FaJs />,
-        name: "javascript",
+        name: "javaScript",
       },
+      // {
+      //   icon: <SiTypescript />,
+      //   name: "typeScript",
+      // },
       {
         icon: <FaReact />,
         name: "react.js",
@@ -99,6 +104,10 @@ const skills = {
       {
         icon: <FaAws />,
         name: "Aws",
+      },
+      {
+        icon: <FaDocker />,
+        name: "Docker",
       },
       {
         icon: <FaGit />,

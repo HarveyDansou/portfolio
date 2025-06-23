@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { FieldValues, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { sendMail } from "@/service/mailapi";
+import { sendMail, sendNotif } from "@/service/mailapi";
 
 const info = [
   {
@@ -43,19 +43,16 @@ const Contact = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isValid },
+    formState: { errors, isValid, isSubmitting },
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   const submitHandler = async (values: FieldValues) => {
     try {
       await sendMail(values);
-      // const { data } = await sendNotif(values);
-
-      // console.log("Response " + data);
+      await sendNotif(values);
+      reset();
     } catch (error) {
       console.log("Error " + error);
-    } finally {
-      reset();
     }
   };
 
@@ -126,7 +123,7 @@ const Contact = () => {
                 }`}
               />
               {/** button */}
-              <Button disabled={!isValid} className="max-w-40">
+              <Button disabled={!isValid || isSubmitting} className="max-w-40">
                 Send message
               </Button>
             </form>

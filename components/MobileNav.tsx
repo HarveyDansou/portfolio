@@ -19,8 +19,7 @@ const MobileNav = ({ links, setStyles }: Props) => {
         <div className="text-center text-2xl mt-32 mb-40">
           <Link href="/">
             <h1 className="text-4xl font-bold">
-              harvey
-              <span className="text-accent">_</span>
+              <span className="text-accent">H</span>arvey
             </h1>
           </Link>
         </div>

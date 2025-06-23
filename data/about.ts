@@ -20,25 +20,26 @@ export default {
       fieldName: "Experience",
       fieldValue: "10+ Years",
     },
-    {
-      fieldName: "Ms Teams",
-      fieldValue: "hairvey.dansou@outlook.com",
-    },
-    {
-      fieldName: "Location",
-      fieldValue: "Winnipeg, MB, CA.",
-    },
+    // {
+    //   fieldName: "Ms Teams",
+    //   fieldValue: "hairvey.dansou@outlook.com",
+    // },
+
     {
       fieldName: "Email",
       fieldValue: "hairvey.dansou@gmail.com",
     },
-    {
-      fieldName: "Freelance",
-      fieldValue: "Available",
-    },
+    // {
+    //   fieldName: "Freelance",
+    //   fieldValue: "Available",
+    // },
     {
       fieldName: "Language",
       fieldValue: "English, French",
+    },
+    {
+      fieldName: "Location",
+      fieldValue: "Winnipeg, MB, CA.",
     },
   ],
 };
