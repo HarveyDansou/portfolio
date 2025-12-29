@@ -8,6 +8,7 @@ import {
   FaReact,
   FaJava,
   FaAws,
+  FaPython,
   FaGit,
   FaGithub,
   FaDocker,
@@ -21,6 +22,7 @@ import {
   SiOracle,
   SiUml,
   SiJira,
+  SiTypescript,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -54,13 +56,17 @@ const skills = {
         name: "java",
       },
       {
+        icon: <FaPython />,
+        name: "python",
+      },
+      {
         icon: <FaJs />,
         name: "javaScript",
       },
-      // {
-      //   icon: <SiTypescript />,
-      //   name: "typeScript",
-      // },
+      {
+        icon: <SiTypescript />,
+        name: "typeScript",
+      },
       {
         icon: <FaReact />,
         name: "react.js",

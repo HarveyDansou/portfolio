@@ -14,7 +14,8 @@ const MobileNav = ({ links, setStyles }: Props) => {
         <CiMenuBurger className="text-[32px] text-accent" />
       </SheetTrigger>
 
-      <SheetContent className="flex flex-col bg-[#d8d8d8]">
+      {/* <SheetContent className="flex flex-col bg-[#d8d8d8]"> */}
+      <SheetContent className="flex flex-col bg-[#f2f2f2]">
         {/* logo */}
         <div className="text-center text-2xl mt-32 mb-40">
           <Link href="/">

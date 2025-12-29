@@ -19,7 +19,7 @@ const info = [
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "contact@harveydansou.com",
+    description: "hairvey.dansou@gmail.com",
   },
   {
     icon: <FaMapMarkedAlt />,

@@ -8,7 +8,7 @@ interface Props {
 
 const socials = [
   { icon: <FaLinkedin />, path: "https://www.linkedin.com/in/harvey-dansou/" },
-  { icon: <FaGithub />, path: "https://github.com/HarveyDansou" },
+  // { icon: <FaGithub />, path: "https://github.com/HarveyDansou" },
   // { icon: <FaYoutube />, path: "https://www.youtube.com/@harveydansou" },
   // { icon: <FaTwitter />, path: "https://x.com/HairveyDansou" },
 ];

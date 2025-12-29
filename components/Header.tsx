@@ -13,7 +13,8 @@ const Header = () => {
     path === pathname && "border-b-2 border-accent text-accent";
 
   return (
-    <header className="py-8 xl:py-12 bg-[#d8d8d8]">
+    // <header className="py-8 xl:py-12 bg-[#d8d8d8]">
+    <header className="py-8 xl:py-12 bg-[#f2f2f2]">
       <div className="container mx-auto flex justify-between items-center">
         {/*logo*/}
         <Link href=".">
