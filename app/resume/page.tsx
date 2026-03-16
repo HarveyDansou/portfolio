@@ -22,7 +22,11 @@ import {
   SiOracle,
   SiUml,
   SiJira,
+  SiMariadb,
   SiTypescript,
+  SiRabbitmq,
+  SiGraphql,
+  SiKubernetes,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -105,8 +109,20 @@ const skills = {
         icon: <SiSqlite />,
         name: "Sqlite",
       },
+      {
+        icon: <SiMariadb />,
+        name: "MariaDB",
+      },
     ],
     [
+      {
+        icon: <SiGraphql />,
+        name: "GraphQL",
+      },
+      {
+        icon: <SiRabbitmq />,
+        name: "RabbitMQ",
+      },
       {
         icon: <FaAws />,
         name: "Aws",
@@ -114,6 +130,10 @@ const skills = {
       {
         icon: <FaDocker />,
         name: "Docker",
+      },
+      {
+        icon: <SiKubernetes />,
+        name: "Kubernetes",
       },
       {
         icon: <FaGit />,
@@ -200,7 +220,7 @@ const Resume = () => {
                     {skills.description}
                   </p>
                 </div>
-                <ScrollArea className="h-[400px] ">
+                <ScrollArea className="h-[400px] md:h-[430px] lg:h-[450px]">
                   <div className="flex flex-col gap-[50px]">
                     {skills.items.map((item, index) => {
                       return (

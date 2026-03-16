@@ -27,7 +27,7 @@ export default [
     description:
       "I build robust and efficient database structures tailored to each project's needs. By applying " +
       "best practices in data modeling, normalization, and optimization, I ensure data consistency, " +
-      "security, and high performance. My experience focuses on relational databases, supporting " +
+      "security, and high performance. My experience focuses on relational and NoSQL databases, supporting " +
       "applications of all sizes.",
     href: "",
   },
