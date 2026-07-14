@@ -17,6 +17,7 @@ import {
   SiAndroid,
   SiDotnet,
   SiSqlite,
+  SiFastapi,
   SiMysql,
   SiPostgresql,
   SiOracle,
@@ -25,6 +26,8 @@ import {
   SiMariadb,
   SiTypescript,
   SiRabbitmq,
+  SiRedis,
+  SiMongodb,
   SiGraphql,
   SiKubernetes,
 } from "react-icons/si";
@@ -50,6 +53,7 @@ const skills = {
     "A solid mix of technical and collaborative skills gained through hands-on experience " +
     "in full-stack development, software design, and problem-solving. Here's what I bring to the table.",
   items: [
+    // programming languages
     [
       {
         icon: <SiDotnet />,
@@ -88,6 +92,7 @@ const skills = {
         name: "android",
       },
     ],
+    // databases
     [
       {
         icon: <FaDatabase />,
@@ -106,18 +111,31 @@ const skills = {
         name: "Mysql",
       },
       {
-        icon: <SiSqlite />,
-        name: "Sqlite",
+        icon: <SiMongodb />,
+        name: "MongoDB",
       },
+      {
+        icon: <SiRedis />,
+        name: "Redis",
+      },
+      // {
+      //   icon: <SiSqlite />,
+      //   name: "Sqlite",
+      // },
       {
         icon: <SiMariadb />,
         name: "MariaDB",
       },
     ],
+    // devops & tools
     [
       {
         icon: <SiGraphql />,
         name: "GraphQL",
+      },
+      {
+        icon: <SiFastapi />,
+        name: "FastAPI",
       },
       {
         icon: <SiRabbitmq />,
@@ -183,7 +201,8 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-primary/60 mx-auto xl:mx-0">
+                {/* <p className="max-w-[600px] text-primary/60 mx-auto xl:mx-0"> */}
+                <p className="text-primary/70 mx-auto xl:mx-0">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -216,7 +235,8 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-primary/60 mx-auto xl:mx-0">
+                  {/* <p className="max-w-[600px] text-primary/60 mx-auto xl:mx-0"> */}
+                  <p className="text-primary/70 mx-auto xl:mx-0">
                     {skills.description}
                   </p>
                 </div>
@@ -258,7 +278,8 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-primary/60 mx-auto xl:mx-0">
+                {/* <p className="max-w-[600px] text-primary/60 mx-auto xl:mx-0"> */}
+                <p className="text-primary/70 mx-auto xl:mx-0">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -289,7 +310,8 @@ const Resume = () => {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-primary/60 mx-auto xl:mx-0">
+                {/* <p className="max-w-[600px] text-primary/60 mx-auto xl:mx-0"> */}
+                <p className="text-primary/70 mx-auto xl:mx-0">
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">

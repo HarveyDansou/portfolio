@@ -1,44 +1,40 @@
 export default [
   {
     num: "01",
-    title: "Software Development",
+    title: "Full-Stack Development",
     description:
-      "I design and build complete solutions across web, mobile, and desktop platforms. " +
-      "From intuitive user interfaces to powerful back-end systems, I develop scalable " +
-      "and efficient applications using modern frameworks and technologies. My goal is to " +
-      "deliver seamless, high-performance experiences that work smoothly across all devices, " +
-      "with a focus on clean architecture, usability, and maintainability.",
+      "I design and develop scalable applications across web, mobile, and desktop platforms. " +
+      "My experience includes building modern user interfaces, RESTful APIs, and backend services " +
+      "using clean architecture principles. I focus on creating secure, maintainable, and high-performance " +
+      "solutions that deliver real business value.",
     href: "",
   },
   {
     num: "02",
-    title: "Systems analysis",
+    title: "Systems Analysis and Design",
     description:
-      "I specialize in analyzing business needs and translating them into effective technical " +
-      "solutions. By examining existing systems, identifying gaps, and gathering user requirements, " +
-      "I help design and improve processes that enhance performance and usability. My approach " +
-      "combines analytical thinking, clear documentation, and close collaboration " +
-      "to ensure systems align with real-world objectives.",
+      "I analyze business requirements and translate them into practical software solutions. " +
+      "By evaluating existing systems, defining technical requirements, and designing efficient workflows, " +
+      "I help organizations improve processes, solve complex problems, and build applications aligned " +
+      "with their operational goals.",
     href: "",
   },
   {
     num: "03",
-    title: "Database Design",
+    title: "Database Design and Engineering",
     description:
-      "I build robust and efficient database structures tailored to each project's needs. By applying " +
-      "best practices in data modeling, normalization, and optimization, I ensure data consistency, " +
-      "security, and high performance. My experience focuses on relational and NoSQL databases, supporting " +
-      "applications of all sizes.",
+      "I design and optimize database solutions that support reliable and scalable applications. " +
+      "My experience includes data modeling, relational database design, query optimization, and " +
+      "building efficient data access layers to ensure performance, consistency, and security.",
     href: "",
   },
   {
     num: "04",
-    title: "Project Monitoring",
+    title: "Enterprise Software Solutions",
     description:
-      "I oversee project progress to ensure timely delivery and quality results. By tracking milestones, " +
-      "managing resources, and identifying risks early, I keep projects on course and aligned with goals. " +
-      "My approach fosters clear communication and proactive problem-solving throughout the development " +
-      "lifecycle.",
+      "I develop business applications that streamline operations and automate complex workflows. " +
+      "My experience includes building enterprise systems such as ERP, CRM, HR, payroll, inventory, " +
+      "and industry-specific solutions using modern software engineering practices.",
     href: "",
   },
 ];

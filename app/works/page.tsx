@@ -21,7 +21,7 @@ const Works = () => {
               return (
                 <li
                   key={index}
-                  className="bg-[#dcdcdc] h-[500px] lg:h-[300px] py-6 px-10 rounded-md flex flex-col justify-center items-center lg:items-start gap-1"
+                  className="bg-[#dcdcdc] h-[500px] lg:h-[400px] py-6 px-10 rounded-md flex flex-col justify-center items-center lg:items-start gap-1"
                 >
                   <div className="w-full flex flex-col xl:justify-between order-2 xl:order-none">
                     <div className="flex flex-col gap-[30px]">
@@ -29,17 +29,21 @@ const Works = () => {
                       {/* <div className="text-3xl leading-none font-extrabold text-transparent text-outline capitalize">
                         {work.num} {work.category}
                       </div> */}
-                      {/** project category */}
+                      {/** project name */}
                       <h2 className="text-[42px] font-bold leading-none text-primary group-hover:text-accent transition-all duration-500 capitalize">
                         {work.title}
                       </h2>
+                      {/** project category */}
+                      <div className="text-xl font-bold leading-none text-primary capitalize">
+                        {work.context}
+                      </div>
                       {/** project description */}
-                      <p className="text-primary/60">{work.description}</p>
+                      <p className="text-primary/70">{work.description}</p>
                       {/** stack */}
-                      <div className="flex gap-4 text-xl text-accent text-wrap">
+                      <div className="flex gap-4 text-l text-accent text-wrap">
                         {work.stack.map((item, index) => {
                           return `${item.name}${
-                            index !== work.stack.length - 1 ? ", " : ""
+                            index !== work.stack.length - 1 ? " | " : ""
                           }`;
                         })}
                       </div>

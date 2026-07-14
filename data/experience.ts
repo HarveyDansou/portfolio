@@ -7,6 +7,11 @@ export default {
     " development and problem-solving across various industries and technologies.",
   items: [
     {
+      company: "Freelance",
+      position: "Full-Stack Developer",
+      duration: "2025 - Present",
+    },
+    {
       company: "Accueil francophone",
       position: "Database Assistant",
       duration: "2024 - 2025",
