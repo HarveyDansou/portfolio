@@ -33,11 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${geistSans.variable} ${jetbrainsMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <Header />
         {/* <PageTransition>{children}</PageTransition> */}
-        {children}
+        <main className="grow pt-20">{children}</main>
         <Analytics />
       </body>
     </html>

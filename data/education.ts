@@ -1,7 +1,7 @@
 // resume - education data
 export default {
   icon: "/",
-  title: "My education",
+  title: "My Education",
   description:
     "My academic background in computer science has equipped me with the core principles and technical" +
     " knowledge that guide my work in software development.",

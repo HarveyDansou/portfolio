@@ -1,7 +1,7 @@
 // resume -experience data
 export default {
   icon: "/",
-  title: "My experience",
+  title: "My Experience",
   description:
     "Here's a look at my professional journey that have shaped my expertise in software" +
     " development and problem-solving across various industries and technologies.",

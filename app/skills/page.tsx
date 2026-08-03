@@ -3,15 +3,27 @@
 import { motion } from "framer-motion";
 import skills from "@/data/competences";
 
+import { MdOutlineDesignServices } from "react-icons/md";
+import { BsBoundingBox, BsBoxes } from "react-icons/bs";
+import { FaCode } from "react-icons/fa6";
+
 const Skills = () => {
+  const style = "text-[50px] relative text-accent";
+  const icons = [
+    <FaCode className={style} />,
+    <MdOutlineDesignServices className={style} />,
+    <BsBoundingBox className={style} />,
+    <BsBoxes className={style} />,
+  ];
+
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
+    <section className="min-h-[80vh] flex flex-col justify-center pb-10">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+            transition: { delay: 1, duration: 0.4, ease: "easeIn" },
           }}
           className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
         >
@@ -19,35 +31,19 @@ const Skills = () => {
             return (
               <div
                 key={index}
-                className="flex-1 flex flex-col justify-center gap-6 group"
+                className="flex-1 flex flex-col justify-center p-2 lg:p-6 gap-6 group border md:border-0 rounded-md border-accent"
               >
-                {/** top */}
-                {/* <div className="w-full flex justify-between items-center">
-                  <div
-                    className="text-5xl font-extrabold text-outline text-transparent 
-                      group-hover:text-outline-hover transition-all duration-500"
-                  >
-                    {skill.num}
-                  </div>
-                  <Link
-                    href={skill.href}
-                    className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent 
-                      transition-all duration-500 flex justify-center items-center hover:rotate-45"
-                  >
-                    <BsArrowDownRight className="text-primary text-3xl" />
-                  </Link>
-                </div> */}
-                {/** title */}
-                <h2
-                  className="text-[42px] font-bold leading-none text-primary 
-                    group-hover:text-accent transition-all duration-500"
-                >
-                  {skill.title}
-                </h2>
+                <span className="flex gap-4">
+                  {icons[index]}
+                  <h2 className="text-3xl xl:text-4xl font-bold leading-none group-hover:text-accent transition-all duration-500">
+                    {skill.title}
+                  </h2>
+                </span>
+
                 {/** description */}
-                <p className="text-primary/60">{skill.description}</p>
-                {/** border */}
-                <div className="border-b border-primary/20 w-full"></div>
+                <p className="text-primary/70 group-hover:text-primary transition-all duration-500">
+                  {skill.description}
+                </p>
               </div>
             );
           })}

@@ -4,7 +4,7 @@ export default [
     num: "23",
     category: "fullstack",
     title: "OndoHub",
-    context: "Employee Leave & Payroll Portal",
+    context: "Employee Leave And Payroll Portal",
     description:
       "Enterprise HR platform for managing employee information, leave requests, payslips, and approval workflows. Built with Clean Architecture principles, role-based authorization, automated notifications, and audit tracking.",
     stack: [

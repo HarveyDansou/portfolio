@@ -17,6 +17,7 @@ import {
   SiAndroid,
   SiDotnet,
   SiSqlite,
+  SiNextdotjs,
   SiFastapi,
   SiMysql,
   SiPostgresql,
@@ -48,7 +49,7 @@ import ResumeBtn from "@/components/ResumeBtn";
 // skills data
 const skills = {
   icon: "/",
-  title: "My skills",
+  title: "My Skills",
   description:
     "A solid mix of technical and collaborative skills gained through hands-on experience " +
     "in full-stack development, software design, and problem-solving. Here's what I bring to the table.",
@@ -78,6 +79,10 @@ const skills = {
       {
         icon: <FaReact />,
         name: "react.js",
+      },
+      {
+        icon: <SiNextdotjs />,
+        name: "next.js",
       },
       {
         icon: <FaHtml5 />,
@@ -179,7 +184,7 @@ const Resume = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 1, duration: 0.4, ease: "easeIn" },
       }}
       className="min-h-[80vh] fax items-center justify-center py-12 xl:py-0"
     >
@@ -192,7 +197,7 @@ const Resume = () => {
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="about">About Me</TabsTrigger>
           </TabsList>
 
           {/** content */}
@@ -200,9 +205,11 @@ const Resume = () => {
             {/** experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
+                <h3 className="text-4xl font-bold text-accent">
+                  {experience.title}
+                </h3>
                 {/* <p className="max-w-[600px] text-primary/60 mx-auto xl:mx-0"> */}
-                <p className="text-primary/70 mx-auto xl:mx-0">
+                <p className="text-primary/80 mx-auto xl:mx-0 lg:pr-10">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -220,7 +227,7 @@ const Resume = () => {
                           <div className="flex items-center gap-3">
                             {/** dot */}
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-primary/70">{item.company}</p>
+                            <p className="text-primary/80">{item.company}</p>
                           </div>
                         </li>
                       );
@@ -234,9 +241,11 @@ const Resume = () => {
             <TabsContent value="skills" className="w-full h-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{skills.title}</h3>
+                  <h3 className="text-4xl font-bold text-accent">
+                    {skills.title}
+                  </h3>
                   {/* <p className="max-w-[600px] text-primary/60 mx-auto xl:mx-0"> */}
-                  <p className="text-primary/70 mx-auto xl:mx-0">
+                  <p className="text-primary/80 mx-auto xl:mx-0 lg:pr-10">
                     {skills.description}
                   </p>
                 </div>
@@ -277,9 +286,11 @@ const Resume = () => {
             {/** education */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{education.title}</h3>
+                <h3 className="text-4xl font-bold  text-accent">
+                  {education.title}
+                </h3>
                 {/* <p className="max-w-[600px] text-primary/60 mx-auto xl:mx-0"> */}
-                <p className="text-primary/70 mx-auto xl:mx-0">
+                <p className="text-primary/80 mx-auto xl:mx-0 lg:pr-10">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -294,7 +305,9 @@ const Resume = () => {
                           <h3 className="text-xl max-w-[260px] min-h-[70px] text-center lg:text-left">
                             {item.degree}
                           </h3>
-                          <p className="text-primary/70">{item.institution}</p>
+                          <p className="text-primary/80 brightness-150">
+                            {item.institution}
+                          </p>
                         </li>
                       );
                     })}
@@ -308,10 +321,12 @@ const Resume = () => {
               value="about"
               className="w-full text-center xl:text-left"
             >
-              <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
+              <div className="flex flex-col gap-[30px] ">
+                <h3 className="text-4xl font-bold text-accent">
+                  {about.title}
+                </h3>
                 {/* <p className="max-w-[600px] text-primary/60 mx-auto xl:mx-0"> */}
-                <p className="text-primary/70 mx-auto xl:mx-0">
+                <p className="text-primary/80 mx-auto xl:mx-0 lg:pr-10">
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
@@ -321,17 +336,19 @@ const Resume = () => {
                         key={index}
                         className="flex items-center justify-center xl:justify-start gap-4"
                       >
-                        <span className="text-primary/60">
+                        <span className="text-primary/70">
                           {item.fieldName}
                         </span>
-                        <span className="text-xl">{item.fieldValue}</span>
+                        <span className="font-semibold md:text-xl">
+                          {item.fieldValue}
+                        </span>
                       </li>
                     );
                   })}
                 </ul>
                 {/** resume button */}
                 <ResumeBtn
-                  containerStyles="max-w-40 uppercase flex items-center gap-2 hover:text-white"
+                  containerStyles="max-w-40 uppercase flex items-center gap-2 hover:text-white mx-auto xl:mx-0"
                   iconStyles="text-xl"
                 />
               </div>

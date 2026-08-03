@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     // <header className="py-8 xl:py-12 bg-[#d8d8d8]">
-    <header className="py-8 xl:py-12 bg-[#f2f2f2]">
+    <header className="fixed top-0 left-0 z-50 w-full bg-[#f2f2f2] shadow-sm">
       <div className="container mx-auto flex justify-between items-center">
         {/*logo*/}
         <Link href=".">

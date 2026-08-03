@@ -1,6 +1,6 @@
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import Link from "next/link";
-import { CiMenuBurger } from "react-icons/ci";
+import { CiMenuFries } from "react-icons/ci";
 
 interface Props {
   links: { name: string; path: string }[];
@@ -11,7 +11,7 @@ const MobileNav = ({ links, setStyles }: Props) => {
   return (
     <Sheet>
       <SheetTrigger asChild className="flex justify-center items-center">
-        <CiMenuBurger className="text-[32px] text-accent" />
+        <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
 
       {/* <SheetContent className="flex flex-col bg-[#d8d8d8]"> */}
@@ -32,7 +32,7 @@ const MobileNav = ({ links, setStyles }: Props) => {
                 key={index}
                 href={link.path}
                 className={`${setStyles(
-                  link.path
+                  link.path,
                 )} capitalize font-medium hover:text-accent transition-all`}
               >
                 {link.name}

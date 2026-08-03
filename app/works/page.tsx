@@ -10,50 +10,50 @@ const Works = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 1, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+      className="min-h-[80vh] flex flex-col justify-center pb-10 xl:px-0"
     >
       <div className="container mx-auto">
-        <ScrollArea className="h-screen">
-          <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-            {projects.map((work, index) => {
-              return (
-                <li
-                  key={index}
-                  className="bg-[#dcdcdc] h-[500px] lg:h-[400px] py-6 px-10 rounded-md flex flex-col justify-center items-center lg:items-start gap-1"
-                >
-                  <div className="w-full flex flex-col xl:justify-between order-2 xl:order-none">
-                    <div className="flex flex-col gap-[30px]">
-                      {/** outline num */}
-                      {/* <div className="text-3xl leading-none font-extrabold text-transparent text-outline capitalize">
+        {/* <ScrollArea className="h-screen"> */}
+        <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+          {projects.map((work, index) => {
+            return (
+              <li
+                key={index}
+                className="bg-[#dcdcdc] py-6 px-10 rounded-md flex flex-col justify-center items-center lg:items-start gap-1"
+              >
+                <div className="w-full flex flex-col xl:justify-between order-2 xl:order-none">
+                  <div className="flex flex-col gap-[30px]">
+                    {/** outline num */}
+                    {/* <div className="text-3xl leading-none font-extrabold text-transparent text-outline capitalize">
                         {work.num} {work.category}
                       </div> */}
-                      {/** project name */}
-                      <h2 className="text-[42px] font-bold leading-none text-primary group-hover:text-accent transition-all duration-500 capitalize">
-                        {work.title}
-                      </h2>
-                      {/** project category */}
-                      <div className="text-xl font-bold leading-none text-primary capitalize">
-                        {work.context}
-                      </div>
-                      {/** project description */}
-                      <p className="text-primary/70">{work.description}</p>
-                      {/** stack */}
-                      <div className="flex gap-4 text-l text-accent text-wrap">
-                        {work.stack.map((item, index) => {
-                          return `${item.name}${
-                            index !== work.stack.length - 1 ? " | " : ""
-                          }`;
-                        })}
-                      </div>
+                    {/** project name */}
+                    <h2 className="text-3xl md:text-[42px] font-bold leading-none text-primary group-hover:text-accent transition-all duration-500 capitalize">
+                      {work.title}
+                    </h2>
+                    {/** project category */}
+                    <div className="text-xl font-semibold md:font-bold leading-none text-primary capitalize">
+                      {work.context}
+                    </div>
+                    {/** project description */}
+                    <p className="text-primary/80">{work.description}</p>
+                    {/** stack */}
+                    <div className="flex gap-4 text-l text-accent text-wrap">
+                      {work.stack.map((item, index) => {
+                        return `${item.name}${
+                          index !== work.stack.length - 1 ? " | " : ""
+                        }`;
+                      })}
                     </div>
                   </div>
-                </li>
-              );
-            })}
-          </ul>
-        </ScrollArea>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+        {/* </ScrollArea> */}
       </div>
     </motion.div>
   );

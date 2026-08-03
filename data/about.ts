@@ -1,8 +1,8 @@
 // resume - about data
 export default {
-  title: "About me",
+  title: "About Me",
   description:
-    "I'm a passionate software developer with a strong background in building efficient, " +
+    "Passionate software developer with a strong background in building efficient, " +
     "user-focused solutions. With experience across web, mobile, and desktop platforms, " +
     "I enjoy solving complex problems and continuously learning new technologies. " +
     "I thrive in collaborative environments and take pride in delivering clean, reliable " +
